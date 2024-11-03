@@ -483,14 +483,4 @@ saveSettingsBtn.addEventListener("click", () => {
     });
 });
 
-//AGREGAR FUNCIONALIDAD AL BOTON CANCELAR CAMBIOS
-cancelSettingsBtn.addEventListener("click", () => {
-    hideSection(settingsContainer);
-    Swal.fire({
-        title: 'No se han guardado los cambios',
-        text: 'En caso de haber hecho cambios, no se verán reflejados en el menú.',
-        icon: 'warning',
-        showConfirmButton: false,
-        timer: 3500
-    });
-});
+ 
