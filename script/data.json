@@ -8,17 +8,17 @@
     },
     {
         "type": "Entradas",
-        "description": "Langostinos empanados",
+        "description": "Pão",
         "price": 1600,
         "available": true,
-        "source": "images/receta-de-langostinos-rebozados.jpg"
+        "source": "images/couvert-1.png"
     },
     {
         "type": "Entradas",
-        "description": "Berenjena Parmesana",
+        "description": "Provoleta",
         "price": 990,
         "available": true,
-        "source": "images/berenjena.jpg"
+        "source": "images/provoleta.png"
     },
     {
         "type": "Entradas",
@@ -29,10 +29,10 @@
     },
     {
         "type": "Entradas",
-        "description": "Mollejas crocantes",
+        "description": "Picada ",
         "price": 1650,
         "available": true,
-        "source": "images/mollejas-828x548.webp"
+        "source": "images/EtuUs5Uwx_1200x0__1.jpg"
     },
     {
         "type": "Principales",
@@ -43,17 +43,17 @@
     },
     {
         "type": "Principales",
-        "description": "Pollo a la mostaza con vegetales asados",
+        "description": "Pizza Caprese + Rucula ",
         "price": 1350,
         "available": true,
-        "source": "images/receta.webp"
+        "source": "images/pizzatomate1b.webp"
     },
     {
         "type": "Principales",
-        "description": "Trucha con arroz cremoso",
+        "description": "Empanadas Variedades -",
         "price": 1650,
         "available": false,
-        "source": "images/trucha.jpg"
+        "source": "images/empanadas.webp"
     },
     {
         "type": "Principales",
@@ -64,10 +64,24 @@
     },
     {
         "type": "Principales",
-        "description": "Ravioles de salmón con salsa de tomates",
+        "description": "Hamburguesa Cheddar + medallones extra",
         "price": 1650,
         "available": true,
-        "source": "images/salsas_originales_para_pasta_rellena_con_gambas_y_tomate_73770_7_600.jpg"
+        "source": "images/hamburguesa.webp"
+    },
+    {
+        "type": "Principales",
+        "description": "Napolitana + Guarnicion a eleccion",
+        "price": 700,
+        "available": true,
+        "source": "images/milanesa-a-la-napolitana-con-guarnicion-de-papas-VLWFAANIWBGPFO4CSUHS7RYVVQ.jpg"
+    },
+    {
+        "type": "Principales",
+        "description": "Tenedor libre mixto",
+        "price": 1650,
+        "available": true,
+        "source": "images/carnes-para-asado-argentino-paulina-cocina-recetas-1200x675.jpg"
     },
     {
         "type": "Postres",
@@ -106,10 +120,10 @@
     },
     {
         "type": "Bebidas",
-        "description": "Agua sin gas",
+        "description": "Latas Variedad",
         "price": 210,
         "available": true,
-        "source": "images/agua.jpg"
+        "source": "images/latagaseosas2.jpg"
     },
     {
         "type": "Bebidas",
@@ -157,9 +171,9 @@
     ,
     {
         "type": "Bebidas",
-        "description": "Trago Gancia + Limon",
+        "description": "Malibu",
         "price": 900,
         "available": true,
-        "source": "images/gancia.webp"
+        "source": "images/malibu-and-pineapple.jpg"
     }
 ]
