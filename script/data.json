@@ -4,7 +4,7 @@
         "description": "Rabas",
         "price": 1590,
         "available": false,
-        "source": "images/rabas.jpg"
+        "source": "images/rabas-caseras.webp"
     },
     {
         "type": "Entradas",
@@ -25,7 +25,7 @@
         "description": "Bruschetta",
         "price": 1200,
         "available": true,
-        "source": "images/bruschetta.jpg"
+        "source": "images/Salmon-Bruschetta-1200-x-1200.jpg"
     },
     {
         "type": "Entradas",
