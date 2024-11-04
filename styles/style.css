@@ -137,3 +137,8 @@
         transform: translatex(100%);
     }
 }
+  .fa-solid{
+    color: rgb(100, 86, 86);
+    font-size: 1rem;
+    margin-left: 10px;
+}
