@@ -3,7 +3,7 @@
         "type": "Entradas",
         "description": "Rabas",
         "price": 1590,
-        "available": false,
+        "available": true,
         "source": "images/rabas-caseras.webp"
     },
     {
@@ -78,31 +78,31 @@
     },
     {
         "type": "Postres",
-        "description": "Creme brulee",
-        "price": 500,
+        "description": "Copa de frutas",
+        "price": 200,
         "available": true,
-        "source": "images/creme_brulee.jpg"
+        "source": "images/postres-veraniegos.jpg.webp"
     },
     {
         "type": "Postres",
-        "description": "Flan casero",
-        "price": 520,
+        "description": "Mousse de chocolate",
+        "price": 320,
         "available": true,
-        "source": "images/flan.jpg"
+        "source": "images/Postres-para-restaurantes-faciles-de-preparar.jpg"
     },
     {
         "type": "Postres",
-        "description": "Ensalada de frutas",
+        "description": "Plátano flambeado con helado",
         "price": 590,
         "available": true,
-        "source": "images/ensalada_frutas.jpg"
+        "source": "images/5-ideas-de-postres-para-restaurantes.jpg"
     },
     {
         "type": "Postres",
-        "description": "Cheesecake con frutos del bosque",
+        "description": "Torta helada Frutilla",
         "price": 560,
-        "available": false,
-        "source": "images/cheseecake.jpg"
+        "available": true,
+        "source": "images/7090fee9f7d606c31889aa40d310b8fa_torta_helada_de_merengue_sin_azúcar.jpg"
     },
     {
         "type": "Bebidas",
@@ -120,10 +120,10 @@
     },
     {
         "type": "Bebidas",
-        "description": "Cerveza Cape Horn",
+        "description": "Daikiri dulce + vodka limon",
         "price": 560,
         "available": false,
-        "source": "images/cerveza.jpg"
+        "source": "images/limon.webp"
     },
     {
         "type": "Bebidas",
@@ -134,9 +134,32 @@
     },
     {
         "type": "Bebidas",
-        "description": "Vino Blanco Norton Cosecha Tardía",
+        "description": "Daikiri dulce + vodka frutilla",
         "price": 900,
         "available": true,
-        "source": "images/vino_blanco.jpg"
+        "source": "images/daikiri.webp"
+    },
+    {
+        "type": "Bebidas",
+        "description": "Trago argentino Fernet",
+        "price": 900,
+        "available": true,
+        "source": "images/fernet.webp"
+    }
+    ,
+    {
+        "type": "Bebidas",
+        "description": "Trago Especial Aperol ",
+        "price": 900,
+        "available": true,
+        "source":"images/aperol.webp"
+    }
+    ,
+    {
+        "type": "Bebidas",
+        "description": "Trago Gancia + Limon",
+        "price": 900,
+        "available": true,
+        "source": "images/gancia.webp"
     }
 ]

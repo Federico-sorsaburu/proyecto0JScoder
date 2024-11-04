@@ -12,7 +12,7 @@
 /* PORTADA */
 #front {
     z-index: 4;
-    background-image: url(../images/front.jpg);
+    background-image: url(../images/bar.webp);
     background-size: cover;
 }
 
