@@ -11,7 +11,7 @@
         "description": "Langostinos empanados",
         "price": 1600,
         "available": true,
-        "source": "images/langostinos.jpg"
+        "source": "images/receta-de-langostinos-rebozados.jpg"
     },
     {
         "type": "Entradas",
@@ -25,14 +25,14 @@
         "description": "Bruschetta",
         "price": 1200,
         "available": true,
-        "source": "images/Salmon-Bruschetta-1200-x-1200.jpg"
+        "source": "images/bruschetta.jpg"
     },
     {
         "type": "Entradas",
         "description": "Mollejas crocantes",
         "price": 1650,
         "available": true,
-        "source": "images/mollejas.jpg"
+        "source": "images/mollejas-828x548.webp"
     },
     {
         "type": "Principales",
@@ -46,7 +46,7 @@
         "description": "Pollo a la mostaza con vegetales asados",
         "price": 1350,
         "available": true,
-        "source": "images/pollo.jpg"
+        "source": "images/receta.webp"
     },
     {
         "type": "Principales",
@@ -60,14 +60,14 @@
         "description": "Entraña con puré rústico",
         "price": 1400,
         "available": true,
-        "source": "images/entrania.jpg"
+        "source": "images/entranas-trenzadas_1920x1080-thumbnail.jpg"
     },
     {
         "type": "Principales",
         "description": "Ravioles de salmón con salsa de tomates",
         "price": 1650,
         "available": true,
-        "source": "images/ravioles.jpg"
+        "source": "images/salsas_originales_para_pasta_rellena_con_gambas_y_tomate_73770_7_600.jpg"
     },
     {
         "type": "Postres",
