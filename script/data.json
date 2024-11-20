@@ -145,35 +145,6 @@
         "price": 1100,
         "available": true,
         "source": "images/vino_tinto.jpg"
-    },
-    {
-        "type": "Bebidas",
-        "description": "Daikiri dulce + vodka frutilla",
-        "price": 900,
-        "available": true,
-        "source": "images/daikiri.webp"
-    },
-    {
-        "type": "Bebidas",
-        "description": "Trago argentino Fernet",
-        "price": 900,
-        "available": true,
-        "source": "images/fernet.webp"
-    }
-    ,
-    {
-        "type": "Bebidas",
-        "description": "Trago Especial Aperol ",
-        "price": 900,
-        "available": true,
-        "source":"images/aperol.webp"
-    }
-    ,
-    {
-        "type": "Bebidas",
-        "description": "Malibu",
-        "price": 900,
-        "available": true,
-        "source": "images/malibu-and-pineapple.jpg"
-    }
+    } 
+    
 ]
