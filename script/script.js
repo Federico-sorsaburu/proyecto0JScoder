@@ -82,7 +82,25 @@ function takeUserData() {
 }
 
 //FUNCION PARA ACTUALIZAR PEDIDO
- 
+function updateOrder(clean) {
+    if (clean === "clean") {orderList.innerHTML = ""};
+    order = [];
+    form.innerHTML = '<input type="hidden" name="_next" value="#"><input type="hidden" name="_captcha" value="false">'; 
+    let listItems = document.querySelectorAll(".list-group-item");
+    let prices = [];
+    listItems.forEach((el, index) => {
+        order.push(new OrderItem(el.description,el.price));
+        prices.push(el.price);
+        form.innerHTML += `<input class="display-none" type="text" name="${index+1} ${el.description}" value="${el.price}">`;
+    });
+    sessionStorage.setItem("order",JSON.stringify(order));
+    counter.textContent = order.length;
+    totalCost.textContent = prices.reduce(((acc,curr) => acc + curr),0);
+    if (!order.length) {
+        toggleOrder();
+        showOrderBtn.classList.add("disabled");
+    }
+}
 
 //FUNCION PARA CONSTRUIR ITEMS DEL MENU
 function createMenuCard(type, description, price, available, source) {
@@ -256,10 +274,72 @@ function createSettingsRow(type, description, price, available, source) {
 }
 
 //FUNCION PARA CREAR MENU Y LISTA DE CONFIGURACION
- 
+function createMenuAndSettings(products) {
+    //LIMPIAR SECCIONES DEL MENU Y LISTA DE CONFIGURACION
+    rowEntradas.innerHTML = "";
+    rowPrincipales.innerHTML = "";
+    rowPostres.innerHTML = "";
+    rowBebidas.innerHTML = "";
+    settingsList.innerHTML = "";
+    //VOLVER A  LLENAR SECCIONES DEL MENU Y LISTA DE CONFIGURACION
+    for (const menuItem of products) {
+        let {type, description, price, available, source} = menuItem;
+        createMenuCard(type, description, price, available, source);
+        createSettingsRow(type, description, price, available, source);
+    }
+    //AGREGAR FUNCIONALIDAD A TODOS LOS BOTONES PARA AGREGAR AL PEDIDO
+    addButtons = document.querySelectorAll(".agregar");
+    addButtons.forEach(el => {
+        el.addEventListener("click", function() {
+            let item = this.description,
+                precio = this.price
+            ;
+            createOrderItem (item,precio);
+            alert.innerHTML = `Agregado: <span class="fw-bold">${item}</span>`;
+            alert.classList.remove("display-none");
+            setTimeout(() => {
+                updateOrder();
+                alert.classList.add("display-none");
+                showOrderBtn.classList.remove("disabled");
+            },1200);
+        })
+    });
+}
 
 //FUNCION PARA CONSTRUIR ITEMS DEL PEDIDO
- 
+function createOrderItem(item, precio) {
+    //CREAR EL DIV CON LA INFO DEL PRODUCTO
+    let itemContent = document.createElement("div");
+    itemContent.innerHTML = `<div class="fw-bold">${item}</div>$${precio}.-`;
+    itemContent.classList.add("info-prod","ms-2","me-auto");
+
+    //CREAR EL BOTON PARA REMOVER EL ITEM
+    let removeBtn = document.createElement("span");
+    removeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16"><path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg>`;
+    removeBtn.classList.add("eliminar","badge","bg-danger");
+
+    //CREAR EL ITEM PARA EL PEDIDO
+    let listItem = document.createElement("li");
+    listItem.description = item;
+    listItem.price = precio;
+    listItem.classList.add("list-group-item","d-flex","justify-content-between","align-items-start");
+    
+    //AGREGAR AL ITEM LA INFO DEL PRODUCTO Y EL BOTON REMOVER
+    listItem.appendChild(itemContent);
+    listItem.appendChild(removeBtn);
+    
+    //AGREGAR AL PEDIDO EL ITEM COMPLETO
+    orderList.appendChild(listItem);
+    
+    //AGREGAR FUNCIONALIDAD AL BOTON PARA REMOVER EL ITEM
+    removeBtn.addEventListener("click", () => {
+        listItem.classList.add("out-item");
+        setTimeout(() => {
+            listItem.remove();
+            updateOrder();
+        },800);
+    })
+}
 
 //FUNCION PARA MOSTRAR-OCULTAR PEDIDO
 function toggleOrder() {
